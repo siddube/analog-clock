@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>My Little Analog Clock</title>
+    <link href="./assets/styles.css" rel="stylesheet">
+  </head>
+  <body>
+    <p class="text">Your Time Will Come!</p>
+    <p class="text">But for now, it is: <span id="time-now"></span> </p>
+    <script src="./assets/libraries/p5.min.js" type="text/javascript"></script>
+    <script src="./assets/libraries/p5.sound.min.js" type="text/javascript"></script>
+    <script src="./assets/sketch.js" type="text/javascript"></script>
+    <script>
+      var d = new Date();
+      var timeNow = window.document.getElementById('time-now');
+      timeNow.innerHTML = d;
+      setInterval(() => {
+        d = new Date();
+        timeNow.innerHTML = d;
+      }, 1000);
+    </script>
+  </body>
+</html>
